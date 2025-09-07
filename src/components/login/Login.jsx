@@ -37,7 +37,7 @@ const Login = () => {
     }
     
 
-  }, [isAuthenticated ,message ,error, loading]);
+  }, [isAuthenticated ,message ,error, loading, dispatch]);
 
 
   const dispatch = useDispatch();
@@ -61,7 +61,7 @@ const Login = () => {
     dispatch(getLoginAction(loginData));
     if (error) {
       
-      enqueueSnackbar(error, { variant: "error" });
+      toast.error(error);
       dispatch(clearErrors());
     }
   };
