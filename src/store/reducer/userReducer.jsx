@@ -18,7 +18,7 @@ const CLEAR_ERROR_USER = createAction("CLEAR_ERROR_USER");
 export const loginReducer = createReducer(
   { user: [], isAuthenticated: false ,message:"",loading:false},(builder) => {
     builder
-    .addCase(LOGIN_REQUEST, (state, action) => {
+    .addCase(LOGIN_REQUEST, (state) => {
       state.loading = true;
     })
     .addCase(LOGIN_SUCCESS, (state, action) => {
@@ -32,11 +32,11 @@ export const loginReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     })
-    .addCase(CLEAR_ERROR_USER, (state, action) => {
+    .addCase(CLEAR_ERROR_USER, (state) => {
       state.error = null;
       state.message = "";
     })
-    .addCase(LOGOUT_REQUEST, (state, action) => {
+    .addCase(LOGOUT_REQUEST, (state) => {
       state.loading = true;
     })
     .addCase(LOGOUT_SUCCESS, (state, action) => {
@@ -49,7 +49,7 @@ export const loginReducer = createReducer(
       state.loading = false;
       state.error = action.payload;
     })
-    .addCase(LOAD_REQUEST, (state, action) => {
+    .addCase(LOAD_REQUEST, (state) => {
       state.loading = true;
     })
     .addCase(LOAD_SUCCESS, (state, action) => {
@@ -65,7 +65,7 @@ export const loginReducer = createReducer(
       state.isAuthenticated = false;
       state.user = null;
     })
-    .addCase(REGSISTER_REQUEST, (state, action) => {
+    .addCase(REGSISTER_REQUEST, (state) => {
       state.loading = true;
     })
     .addCase(REGSISTER_SUCCESS, (state, action) => {
