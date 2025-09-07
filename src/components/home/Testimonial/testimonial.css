@@ -1,0 +1,14 @@
+.testimonial-item {
+    border: 1px dashed rgba(0, 185, 142, .3) !important;
+}
+
+.testimonial-div {
+    width: 50vh;
+}
+
+
+@media screen and (max-width: 768px){
+    .testimonial-div {
+        width: auto;
+    }
+}
