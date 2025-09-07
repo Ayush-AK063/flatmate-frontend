@@ -23,7 +23,8 @@ export const store = configureStore({
   reducer: rootReducer
 });
 
-export const server = "http://localhost:5000";
+// export const server = "http://localhost:5000";
 // export const server = "https://flat-mate-backend.onrender.com";
 // export const server = "https://flatmate-backend2.onrender.com";
 // export const server = "https://flatemate.ddns.net";
+export const server = "https://flatmate-backend-teal.vercel.app";
